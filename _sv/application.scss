@@ -1,0 +1,459 @@
+/* v0
+ */
+
+/* Variables
+ *  - - - - - - - - - - - - - - - - */
+$color-base:                             #000;
+
+/*doc
+ ---
+ title: Stencil
+ name: stencil
+ category: Libraries
+ ---
+
+[Stencil Mail](http://dijkstra.io/stencil-mail/docs/) has been included.
+*/
+
+@import '_lib/stencil/stencil';
+
+@import '_partials/banner';
+@import '_partials/centered';
+@import '_partials/flag';
+@import '_partials/grid';
+@import '_partials/mailchimp';
+@import '_partials/media';
+@import '_partials/split';
+@import '_partials/stacked';
+@import '_partials/two_columns';
+
+/**
+ *  Base
+ *  - - - - - - - - - - - - - - - - */
+
+@font-face{
+  font-family: "GT America Medium";
+  src: url("https://s3.amazonaws.com/xxxi/GT-America/GT-America-Medium-v1.otf") format('opentype');
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "GT America Condensed Medium";
+  src: url("https://s3.amazonaws.com/xxxi/GT-America/GT-America-Condensed-Regular-v1.otf") format('opentype');
+  font-style: normal;
+}
+
+
+body {
+  color: $color-base;
+  font-size: 22px;
+  font-family: sans-serif;
+  height: 100%;
+  font-family: "GT America Medium", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: $text-sm;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  word-break: normal;
+}
+
+p {
+  line-height: $line-sm;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+hr {
+  background-color: $color-base;
+  border: none;
+  color: $color-base;
+  height: 1px;
+}
+
+a {
+  color: $color-base;
+  //text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0;
+    color: $color-base;
+    text-decoration: none;
+  }
+}
+
+.main {
+  padding: 25px;
+
+  @include mobile {
+    padding: 10px !important;
+  }
+}
+
+.between{
+  padding-right: 3px;
+  background-color: black;
+  height: 100%;
+  display: table-cell !important;
+
+  @include desk {
+    padding-right: 5px !important;
+  }
+
+  @include mobile {
+    padding-right: 2px !important;
+  }
+}
+
+.border{
+  border: solid black 3px;
+
+  @include desk {
+    border: solid black 5px !important;
+  }
+
+  @include mobile {
+    border: solid black 2px !important;
+  }
+}
+
+.border-b{
+  border-bottom: solid black 3px;
+
+  @include desk {
+    border-bottom: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-bottom: solid black 2px !important;
+  }
+}
+
+.border-t{
+  border-top: solid black 3px;
+
+  @include desk {
+    border-top: solid black 8px !important;
+  }
+
+  @include mobile {
+    border-top: solid black 2px !important;
+  }
+}
+
+.border-l{
+  border-left: solid black 3px;
+
+  @include desk {
+    border-left: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-left: solid black 2px !important;
+  }
+}
+
+.border-r{
+  border-right: solid black 3px;
+
+  @include desk {
+    border-right: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-right: solid black 2px !important;
+  }
+}
+
+.spacerlg{
+  height: 30px;
+}
+
+.x-two{
+  width: 64% !important;
+}
+
+// Section one
+
+.section-one{
+
+  td{
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .media-body{
+    text-transform: uppercase;
+    font-family: "GT America Condensed Medium", "Arial Narrow", "Arial" ,sans-serif;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 700;
+  	line-height: 22px;
+    letter-spacing: 0.15em;
+
+    //firefox
+    table{
+      width:100%;
+    }
+
+    .forceit{
+      @include to(401px) {
+        font-size: 9px !important;
+        letter-spacing: 0.05em!important;
+      }
+    }
+
+    @include lap {
+      font-size: 22px !important;
+    }
+
+    @include desk {
+      font-size: $text-lg !important;
+    }
+
+    @include mobile {
+      font-size: 15px !important;
+    }
+
+    @include to(401px) {
+      font-size: 9px !important;
+      letter-spacing: 0.05em!important;
+    }
+  }
+}
+
+
+// Section two
+
+.section-two{
+
+  td{
+    text-align: center;
+    width:auto;
+    vertical-align: bottom;
+  }
+
+  .title{
+    padding: 30px 50px;
+
+    @include mobile {
+      padding: 40px 50px;
+    }
+  }
+
+  .media-body{
+    vertical-align: bottom;
+  }
+
+  .media-image{
+    padding: 30px;
+  }
+
+  .exhibition{
+    text-transform: uppercase;
+    padding-bottom: 130px;
+    height: 100%;
+    font-family: "GT America Condensed Medium", "Arial Narrow", "Arial" ,sans-serif;
+  	font-style: normal;
+  	font-variant: normal;
+  	font-weight: 700;
+    letter-spacing: $letter-md;
+
+    @include to(401px) {
+      font-size: 9px !important;
+      letter-spacing: 0.05em!important;
+    }
+
+    @include desk {
+      font-size: $text-lg !important;
+      padding-bottom: 300px;
+    }
+
+    @include mobile {
+      font-size: 15px !important;
+      line-height: $line-md;
+      padding-bottom: 60px !important;
+    }
+  }
+}
+
+
+// Section three
+
+.section-three{
+
+  td{
+    text-align: center;
+  }
+
+  .media-body{
+    text-transform: uppercase;
+    padding: 50px 50px;
+
+    @include desk {
+      img{
+        width: 80%;
+        padding-bottom: 20px;
+      }
+    }
+
+    @include mobile {
+      padding: 10px 50px !important;
+    }
+  }
+
+  .media-image{
+    padding: 50px 50px;
+
+    @include desk {
+      img{
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    @include mobile {
+      padding: 30px 40px !important;
+    }
+  }
+
+  .between{
+    position: relative;
+
+    .halfwhite{
+      position: absolute;
+      top: 40%;
+      height: 60%;
+      width: 100%;
+      background-color: white;
+    }
+  }
+}
+
+// Section four
+.section-four{
+
+  div{
+    padding: 60px;
+    text-align: left;
+
+    p{
+      padding-top: 20px;
+      font-family: "GT America Medium", "Arial", sans-serif;
+    	font-size: 20px;
+    	font-style: normal;
+    	font-variant: normal;
+      line-height: $line-md;
+
+      @include mobile {
+        padding-top: 20px;
+        font-size: 15px !important;
+      	font-style: normal;
+      	font-variant: normal;
+        line-height: $line-md;
+      }
+
+      @include desk {
+        width: 100%;
+      }
+    }
+
+    .text{
+      width: 100%;
+
+      @include gutter {
+        width: 80% !important;
+      }
+    }
+
+    .spnsored img{
+      width:15%;
+      max-width: 100px;
+      height: auto;
+      padding-top: 15px;
+      margin-left: 20px;
+    }
+
+    @include mobile {
+      padding: 30px !important;
+
+      .push{
+        //padding-top: 0px;
+      }
+    }
+
+    @include gutter {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+
+    .push{
+      //padding-top: 50px;
+    }
+
+    span{
+      text-transform: uppercase;
+      letter-spacing: $letter-sm;
+    }
+
+    @include desk {
+      width: 60%;
+    }
+  }
+}
+
+// footer
+
+.footer{
+  width: 100%;
+
+    td{
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .half{
+      width: 50%;
+      float: left;
+      margin: 10px 0 10px 0;
+    }
+
+  .copy{
+    font-size: 9px !important;
+    line-height: 1.5em;
+  }
+
+  td, a{
+    color: black !important
+  }
+}
+
+.mailchimp{
+    font-family: "GT America Medium", "Arial", sans-serif !important;
+    background-color: white;
+    font-size: 13px !important;
+    line-height: $line-xl;
+    color: black !important;
+}

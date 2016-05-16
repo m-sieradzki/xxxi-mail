@@ -1,1 +1,1 @@
-# xxxi-mail
+# Template for xxxi Mails
