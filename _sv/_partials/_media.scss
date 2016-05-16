@@ -14,7 +14,7 @@
           <tr>
             <td>
               <div class="media">
-                <div class="media-image">
+                <div class="left">
                   <a href="#" class="u-hidden-lap" target="_blank">
                     <img src="http://placehold.it/600x400&text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" />
                   </a>
@@ -24,7 +24,7 @@
                   </a>
                 </div>
 
-                <div class="media-body">
+                <div class="right">
                   <table>
                     <tr>
                       <td>
@@ -57,21 +57,17 @@
 .media {
   @include lap {
     display: table !important;
-    width: 100% !important;
+    //width: 100% !important;
   }
 }
 
-.media-image,
-.media-body {
+.left,
+.right {
   display: table-cell;
   width: 100%;
 
   @include lap {
     display: table-cell !important;
-    width: 50% !important;
+    //width: 50% !important;
   }
-}
-
-.media-body {
-  vertical-align: middle;
 }

@@ -194,6 +194,10 @@ a {
   width: 64% !important;
 }
 
+.x-one{
+  width: 36% !important;
+}
+
 // Section one
 
 .section-one{
@@ -203,7 +207,7 @@ a {
     vertical-align: middle;
   }
 
-  .media-body{
+  .right{
     text-transform: uppercase;
     font-family: "GT America Condensed Medium", "Arial Narrow", "Arial" ,sans-serif;
   	font-style: normal;
@@ -211,6 +215,7 @@ a {
   	font-weight: 700;
   	line-height: 22px;
     letter-spacing: 0.15em;
+    vertical-align: middle;
 
     //firefox
     table{
@@ -262,11 +267,11 @@ a {
     }
   }
 
-  .media-body{
+  .right{
     vertical-align: bottom;
   }
 
-  .media-image{
+  .left{
     padding: 30px;
   }
 
@@ -307,7 +312,7 @@ a {
     text-align: center;
   }
 
-  .media-body{
+  .right{
     text-transform: uppercase;
     padding: 50px 50px;
 
@@ -323,7 +328,7 @@ a {
     }
   }
 
-  .media-image{
+  .left{
     padding: 50px 50px;
 
     @include desk {
