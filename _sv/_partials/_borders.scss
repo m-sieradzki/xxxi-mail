@@ -1,0 +1,59 @@
+.border{
+  border: solid black 3px;
+
+  @include desk {
+    border: solid black 5px !important;
+  }
+
+  @include mobile {
+    border: solid black 2px !important;
+  }
+}
+
+.border-b{
+  border-bottom: solid black 3px;
+
+  @include desk {
+    border-bottom: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-bottom: solid black 2px !important;
+  }
+}
+
+.border-t{
+  border-top: solid black 3px;
+
+  @include desk {
+    border-top: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-top: solid black 2px !important;
+  }
+}
+
+.border-l{
+  border-left: solid black 3px;
+
+  @include desk {
+    border-left: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-left: solid black 2px !important;
+  }
+}
+
+.border-r{
+  border-right: solid black 3px;
+
+  @include desk {
+    border-right: solid black 5px !important;
+  }
+
+  @include mobile {
+    border-right: solid black 2px !important;
+  }
+}
