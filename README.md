@@ -7,7 +7,7 @@
 		<td>
 			<div>
 				<table>
-				<!— start of sections —>
+				<!-- start of sections -->
 				
 				<tr>
 					<td>
@@ -45,7 +45,7 @@
 
 				[…]
 
-				<!— end of sections —>
+				<!-- end of sections -->
 				</table>
 			</div>
 		</td>
