@@ -62,7 +62,8 @@
 }
 
 .left,
-.right {
+.right,
+.middle {
   display: table-cell;
   width: 100%;
   vertical-align: middle;
@@ -74,9 +75,13 @@
 }
 
 .x-two{
-  width: 64%;
+  width: 66%;
 }
 
 .x-one{
-  width: 36%;
+  width: 34%;
+}
+
+.x-three{
+  width: 33.3333%;
 }

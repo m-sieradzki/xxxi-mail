@@ -53,8 +53,7 @@
 ```
 */
 
-.mailchimp {
-  background: black;
-  color: white;
-  @include a(white);
+.mailchimp{
+    font-size: 13px !important;
+    line-height: $line-xl;
 }

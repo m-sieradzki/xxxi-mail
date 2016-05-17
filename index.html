@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     
   </head>
-  <body style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #000; font-family: 'GT America Medium','Arial',sans-serif; font-size: 22px; height: 100%; margin: 0; min-width: 100%; padding: 0; width: 100% !important"><style type="text/css">
+  <body style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #000; font-family: sans-serif; font-size: 22px; height: 100%; margin: 0; min-width: 100%; padding: 0; width: 100% !important"><style type="text/css">
 @media screen and (min-width:750px) {
   table[class="body"] .u-hidden-lap {
     display: none !important;
@@ -118,19 +118,22 @@
   .eight-up td {
     width: 82.5px !important;
   }
-  .flag-image {
-    max-width: 270px !important; min-width: 270px !important;
+  .cells {
+    display: table !important;
   }
-  .media {
-    display: table !important; width: 100% !important;
+  .left {
+    display: table-cell !important;
   }
-  .media-image {
-    display: table-cell !important; width: 50% !important;
+  .right {
+    display: table-cell !important;
   }
-  .media-body {
-    display: table-cell !important; width: 50% !important;
+  .middle {
+    display: table-cell !important;
   }
-  .section-one .media-body {
+  .section-one .right {
+    font-size: 22px !important;
+  }
+  .section-five .right {
     font-size: 22px !important;
   }
 }
@@ -152,26 +155,8 @@ outline: 0; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto;
 body.outlook p {
 display: inline !important;
 }
-.mailchimp a:hover {
-color: white !important;
-}
-.mailchimp a:visited {
-color: white !important;
-}
-.mailchimp a:focus {
-color: white !important;
-}
-.mailchimp a:active {
-color: white !important;
-}
-@font-face {
-font-family: "GT America Medium"; src: url("https://s3.amazonaws.com/xxxi/GT-America/GT-America-Medium-v1.otf") format("opentype"); font-style: normal;
-}
-@font-face {
-font-family: "GT America Condensed Medium"; src: url("https://s3.amazonaws.com/xxxi/GT-America/GT-America-Condensed-Regular-v1.otf") format("opentype"); font-style: normal;
-}
 body {
-color: #000; font-size: 22px; height: 100%; font-family: "GT America Medium","Arial",sans-serif;
+color: #000; font-size: 22px; font-family: sans-serif; height: 100%;
 }
 a:hover {
 outline: 0; color: #000; text-decoration: none;
@@ -189,9 +174,6 @@ outline: 0; color: #000; text-decoration: none;
   table.container.wide {
     width: 890px !important;
   }
-  .between {
-    padding-right: 5px !important;
-  }
   .border {
     border: solid black 5px !important;
   }
@@ -199,7 +181,7 @@ outline: 0; color: #000; text-decoration: none;
     border-bottom: solid black 5px !important;
   }
   .border-t {
-    border-top: solid black 8px !important;
+    border-top: solid black 5px !important;
   }
   .border-l {
     border-left: solid black 5px !important;
@@ -207,16 +189,16 @@ outline: 0; color: #000; text-decoration: none;
   .border-r {
     border-right: solid black 5px !important;
   }
-  .section-one .media-body {
+  .between {
+    padding-right: 5px !important;
+  }
+  .section-one .right {
     font-size: 40px !important;
   }
-  .section-two .exhibition {
-    font-size: 40px !important; padding-bottom: 300px;
+  .section-two .title {
+    font-size: 40px !important;
   }
-  .section-three .media-body img {
-    width: 80%; padding-bottom: 20px;
-  }
-  .section-three .media-image img {
+  .section-three .left img {
     width: 50%; padding-top: 20px; padding-bottom: 20px;
   }
   .section-four div p {
@@ -225,25 +207,13 @@ outline: 0; color: #000; text-decoration: none;
   .section-four div {
     width: 60%;
   }
+  .section-five .right {
+    font-size: 40px !important;
+  }
 }
 @media screen and (max-width:748px) {
   .gutter:first-child {
     min-width: 0 !important; max-width: 0 !important; width: 0 !important;
-  }
-  .flag-image {
-    max-width: 170px !important; min-width: 170px !important;
-  }
-  .flag-body:first-child {
-    max-width: 0 !important; min-width: 0 !important; width: auto !important;
-  }
-  .flag-body:last-child {
-    width: 100% !important;
-  }
-  .main {
-    padding: 10px !important;
-  }
-  .between {
-    padding-right: 2px !important;
   }
   .border {
     border: solid black 2px !important;
@@ -260,26 +230,29 @@ outline: 0; color: #000; text-decoration: none;
   .border-r {
     border-right: solid black 2px !important;
   }
-  .section-one .media-body {
+  .main {
+    padding: 10px !important;
+  }
+  .between {
+    padding-right: 2px !important;
+  }
+  .section-one .right {
     font-size: 15px !important;
   }
   .section-two .title {
-    padding: 40px 50px;
+    font-size: 15px !important; line-height: 1.5;
   }
-  .section-two .exhibition {
-    font-size: 15px !important; line-height: 1.5; padding-bottom: 60px !important;
-  }
-  .section-three .media-body {
-    padding: 10px 50px !important;
-  }
-  .section-three .media-image {
+  .section-three .left {
     padding: 30px 40px !important;
   }
   .section-four div p {
-    padding-top: 20px; font-size: 15px !important; font-style: normal; font-variant: normal; line-height: 1.5;
+    font-size: 15px !important; font-style: normal; font-variant: normal; line-height: 1.5;
   }
   .section-four div {
     padding: 30px !important;
+  }
+  .section-five .right {
+    font-size: 15px !important;
   }
 }
 @media screen and (max-width:689px) {
@@ -426,13 +399,7 @@ outline: 0; color: #000; text-decoration: none;
   }
 }
 @media screen and (max-width:400px) {
-  .section-one .media-body .forceit {
-    font-size: 9px !important; letter-spacing: .05em !important;
-  }
-  .section-one .media-body {
-    font-size: 9px !important; letter-spacing: .05em !important;
-  }
-  .section-two .exhibition {
+  .section-two .title {
     font-size: 9px !important; letter-spacing: .05em !important;
   }
 }
@@ -447,11 +414,11 @@ outline: 0; color: #000; text-decoration: none;
 </style>
     <table class="body" align="center" style="border-collapse: collapse; border-spacing: 0; height: 100%; padding: 0; text-align: left; vertical-align: top; width: 100%">
       <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-        <td class="center" align="center" valign="top" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: top; width: 100%">
+        <td class="center" align="center" valign="top" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto">
           <center style="min-width: 580px; width: 100%">
   <table class="container full" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 100% !important">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <a href="#" class="u-hidden-lap" target="_blank" style="color: #000; display: block">
           <img src="http://placehold.it/600x400&amp;text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" style="-ms-interpolation-mode: bicubic; border: 0; display: block; height: auto; margin: 0 auto; max-width: 100%; outline: 0; text-decoration: none; width: 100%" />
         </a>
@@ -461,7 +428,7 @@ outline: 0; color: #000; text-decoration: none;
         </a>
       </td>
 
-      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
     </tr>
   </table>
 </center>
@@ -469,9 +436,9 @@ outline: 0; color: #000; text-decoration: none;
 <center style="min-width: 580px; width: 100%">
   <table class="container full" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 100% !important">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <div class="media">
-          <div class="media-image" style="display: table-cell; width: 100%">
+          <div class="left" style="display: table-cell; vertical-align: middle; width: 100%">
             <a href="#" class="u-hidden-lap" target="_blank" style="color: #000; display: block">
               <img src="http://placehold.it/600x400&amp;text=Mobile%20Image" class="u-responsive u-responsive--full" alt="Alt" style="-ms-interpolation-mode: bicubic; border: 0; display: block; height: auto; margin: 0 auto; max-width: 100%; outline: 0; text-decoration: none; width: 100%" />
             </a>
@@ -481,27 +448,27 @@ outline: 0; color: #000; text-decoration: none;
             </a>
           </div>
 
-          <div class="media-body" style="display: table-cell; vertical-align: middle; width: 100%">
+          <div class="right" style="display: table-cell; vertical-align: middle; width: 100%">
             <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top">
               <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-                <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+                <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
                   <div>A witty title.</div>
                   <div>Some text with a <a href="#" target="_blank" style="color: #000">Link</a>, and another <a href="" target="_blank" style="color: #000">Link</a>.</div>
                   <a href="#" target="_blank" style="color: #000">Link</a>
                 </td>
 
-                <td class="gutter u-tam" style="border-collapse: collapse !important; max-width: 45px; min-width: 45px; padding: 0; text-align: left; vertical-align: top; width: 45px" align="left" valign="top">
+                <td class="gutter u-tam" style="border-collapse: collapse !important; max-width: 45px; min-width: 45px; padding: 0; text-align: center; vertical-align: middle; width: 45px" align="center" valign="middle">
                   <a href="#" target="_blank" style="color: #000">Link</a>
                 </td>
 
-                <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+                <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
               </tr>
             </table>
           </div>
         </div>
       </td>
 
-      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
     </tr>
   </table>
 </center>
@@ -509,20 +476,20 @@ outline: 0; color: #000; text-decoration: none;
 <center class="u-pvxl" style="min-width: 580px; padding-bottom: 100px !important; padding-top: 100px !important; width: 100%">
   <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td class="gutter" style="border-collapse: collapse !important; max-width: 45px; min-width: 45px; padding: 0; text-align: left; vertical-align: top; width: 45px" align="left" valign="top"> </td>
+      <td class="gutter" style="border-collapse: collapse !important; max-width: 45px; min-width: 45px; padding: 0; text-align: center; vertical-align: middle; width: 45px" align="center" valign="middle"> </td>
 
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <table class="container wide" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 100%">
           <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-            <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+            <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
               <div class="media">
-                <div class="media-image" style="display: table-cell; width: 100%">
+                <div class="left" style="display: table-cell; vertical-align: middle; width: 100%">
                   <div class="t-center u-padding-vertical-lg" style="padding-bottom: 60px !important; padding-top: 60px !important; text-align: center" align="center">
                     When you have content on the top …
                   </div>
                 </div>
 
-                <div class="media-body" style="display: table-cell; vertical-align: middle; width: 100%">
+                <div class="right" style="display: table-cell; vertical-align: middle; width: 100%">
                   <div class="t-center u-padding-vertical-lg" style="padding-bottom: 60px !important; padding-top: 60px !important; text-align: center" align="center">
                     You might want it on the side on desk.
                   </div>
@@ -530,14 +497,14 @@ outline: 0; color: #000; text-decoration: none;
               </div>
             </td>
 
-            <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+            <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
           </tr>
         </table>
       </td>
 
-      <td class="gutter u-tam" style="border-collapse: collapse !important; max-width: 45px; min-width: 45px; padding: 0; text-align: left; vertical-align: top; width: 45px" align="left" valign="top"> </td>
+      <td class="gutter u-tam" style="border-collapse: collapse !important; max-width: 45px; min-width: 45px; padding: 0; text-align: center; vertical-align: middle; width: 45px" align="center" valign="middle"> </td>
 
-      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
     </tr>
   </table>
 </center>
@@ -545,31 +512,31 @@ outline: 0; color: #000; text-decoration: none;
 <center class="u-pvxl" style="min-width: 580px; padding-bottom: 100px !important; padding-top: 100px !important; width: 100%">
   <table class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 510px">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <table class="row u-pvlg" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 60px 0; position: relative; text-align: left; vertical-align: top; width: 100%">
           <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-            <td class="wrapper" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+            <td class="wrapper" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
               <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 277.5px">
                 <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: top; width: 100%" align="center" valign="top">
+                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
                     <div class="u-padding-vertical-lg" style="padding-bottom: 60px !important; padding-top: 60px !important">
                       When you have content on the left …
                     </div>
                   </td>
-                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
                 </tr>
               </table>
             </td>
 
-            <td class="wrapper last" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+            <td class="wrapper last" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
               <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 277.5px">
                 <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: top; width: 100%" align="center" valign="top">
+                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
                     <div class="u-padding-vertical-lg" style="padding-bottom: 60px !important; padding-top: 60px !important">
                       You will undobtedly want content on the right.
                     </div>
                   </td>
-                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
                 </tr>
               </table>
             </td>
@@ -578,7 +545,7 @@ outline: 0; color: #000; text-decoration: none;
         </table>
       </td>
 
-      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
     </tr>
   </table>
 </center>
@@ -586,13 +553,13 @@ outline: 0; color: #000; text-decoration: none;
 <center class="u-pvxl" style="min-width: 580px; padding-bottom: 100px !important; padding-top: 100px !important; width: 100%">
   <table class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 510px">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <table class="row u-pvlg" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 60px 0; position: relative; text-align: left; vertical-align: top; width: 100%">
           <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-            <td class="wrapper last" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+            <td class="wrapper last" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
               <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 555px">
                 <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: top; width: 100%" align="center" valign="top">
+                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
                     <div class="u-padding-vertical-lg" style="padding-bottom: 60px !important; padding-top: 60px !important">
                       <a href="#" class="u-hidden-lap" target="_blank" style="color: #000; display: block">
                         <img src="http://placehold.it/250x250&amp;text=Mobile%20Image" class="u-responsive" alt="Alt" style="-ms-interpolation-mode: bicubic; border: 0; display: block; height: auto; margin: 0 auto; max-width: 100%; outline: 0; text-decoration: none; width: auto" />
@@ -608,7 +575,7 @@ outline: 0; color: #000; text-decoration: none;
                     </div>
                   </td>
 
-                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
                 </tr>
               </table>
             </td>
@@ -617,7 +584,7 @@ outline: 0; color: #000; text-decoration: none;
         </table>
       </td>
 
-      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+      <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
     </tr>
   </table>
 </center>
@@ -625,14 +592,14 @@ outline: 0; color: #000; text-decoration: none;
 <center class="u-pvxl" style="min-width: 580px; padding-bottom: 100px !important; padding-top: 100px !important; width: 100%">
   <table class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 510px">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td class="split" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: bottom; width: 50%" align="left" valign="bottom">
+      <td class="split" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <div class="pull-right" style="float: right">
           <div><a href="#" style="color: #000">Some Guy</a></div>
           <div>Founder of Some<br />Company.</div>
         </div>
       </td>
 
-      <td class="split image" style="border-collapse: collapse !important; line-height: 0; padding: 0; text-align: left; vertical-align: bottom; width: 50%" align="left" valign="bottom">
+      <td class="split image" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <div class="pull-left" style="float: left">
           <img src="http://placehold.it/150x150&amp;text=Centered%20Image" alt="Alt" style="-ms-interpolation-mode: bicubic; outline: 0; text-decoration: none; width: auto" />
         </div>
@@ -644,16 +611,16 @@ outline: 0; color: #000; text-decoration: none;
 <center class="u-pvxl" style="min-width: 580px; padding-bottom: 100px !important; padding-top: 100px !important; width: 100%">
   <table class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 510px">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
-        <table class="flag" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
+        <table class="flag" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top">
           <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-            <td class="flag-body" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: middle; width: 50%" align="left" valign="middle"> </td>
+            <td class="flag-body" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle"> </td>
 
-            <td class="flag-image" style="border-collapse: collapse !important; max-width: 220px; min-width: 220px; padding: 0; text-align: left; vertical-align: top; width: auto" align="left" valign="top">
+            <td class="flag-image" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
               <a href="#" target="_blank" style="color: #000"><img src="http://placehold.it/150x150&amp;text=Centered%20Image" alt="Alt" class="u-responsive u-responsive--full" style="-ms-interpolation-mode: bicubic; border: 0; display: block; height: auto; margin: 0 auto; max-width: 100%; outline: 0; text-decoration: none; width: 100%" /></a>
             </td>
 
-            <td class="flag-body" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: middle; width: 50%" align="left" valign="middle">
+            <td class="flag-body" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
               <div><a href="#" target="_blank" style="color: #000">Some Girl</a></div>
               <div>Venture Partner at<br /><a href="#" target="_blank" style="color: #000">A Good Company</a></div>
             </td>
@@ -664,17 +631,17 @@ outline: 0; color: #000; text-decoration: none;
   </table>
 </center>
 
-<center class="mailchimp u-padding-top-sm u-padding-bottom-md" style="background: white; color: black !important; font-family: 'GT America Medium','Arial',sans-serif !important; font-size: 13px !important; line-height: 2; min-width: 580px; padding-bottom: 30px !important; padding-top: 15px !important; width: 100%">
+<center class="mailchimp u-padding-top-sm u-padding-bottom-md" style="font-size: 13px !important; line-height: 2; min-width: 580px; padding-bottom: 30px !important; padding-top: 15px !important; width: 100%">
   <table class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 510px">
     <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-      <td style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+      <td style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
         <table class="row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%">
           <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-            <td class="wrapper last" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%" align="left" valign="top">
+            <td class="wrapper last" style="border-collapse: collapse !important; padding: 0; position: relative; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
 
               <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 555px">
                 <tr style="padding: 0; text-align: left; vertical-align: top" align="left">
-                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: top; width: 100%" align="center" valign="top">
+                  <td class="t-center" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; width: auto" align="center" valign="middle">
                     <p class="u-text-xs t-center" style="font-size: 18px; font-weight: normal; letter-spacing: 0; line-height: 1.25; margin: 0; padding: 0; text-align: center; word-break: normal" align="center">
                       Copyright © 2015
                     </p>
@@ -688,10 +655,10 @@ outline: 0; color: #000; text-decoration: none;
                     </p>
 
                     <p class="u-text-xs t-center u-ptmd" style="font-size: 18px; font-weight: normal; letter-spacing: 0; line-height: 1.25; margin: 0; padding: 30px 0 0; text-align: center; word-break: normal" align="center">
-                      <a href="*|UNSUB|*" style="color: white !important">Unsubscribe?</a>
+                      <a href="*|UNSUB|*" style="color: #000">Unsubscribe?</a>
                     </p>
                   </td>
-                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0" align="left" valign="top"></td>
+                  <td class="expander" style="border-collapse: collapse !important; padding: 0; text-align: center; vertical-align: middle; visibility: hidden; width: 0" align="center" valign="middle"></td>
                 </tr>
               </table>
 
