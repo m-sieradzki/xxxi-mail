@@ -22,13 +22,13 @@
 											</div>
 											
 											<div class="between">
-                          <table>
-                            <tr>
-                              <td>
-                              </td>
-                            <tr>
-                          </table>
-                        </div>
+								                          <table>
+								                            <tr>
+								                              <td>
+								                              </td>
+								                            <tr>
+								                          </table>
+								                        </div>
 
 											<div class=“right x-two/x-one/x-three”>
 												CONTENT
